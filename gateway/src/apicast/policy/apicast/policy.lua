@@ -77,6 +77,12 @@ function _M:access(context)
   return ok, err
 end
 
+_M.content = function()
+  if not ngx.headers_sent then
+    ngx.exec("@upstream")
+  end
+end
+
 _M.body_filter = noop
 _M.header_filter = noop
 
