@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Move rejection reason parsing from CacheHandler to Proxy [PR #541](https://github.com/3scale/apicast/pull/541)
 - Propagate full package.path and cpath from the CLI to Nginx [PR #538](https://github.com/3scale/apicast/pull/538)
 - `post_action` phase now shares `ngx.ctx` with the main request [PR #539](https://github.com/3scale/apicast/pull/539)
+- Decrease nginx timer resolution to improve performance and enable PCRE JIT [PR #543](https://github.com/3scale/apicast/pull/543)
 - Moved `proxy_pass` into new internal location `@upstream` [PR #535](https://github.com/3scale/apicast/pull/535)
 
 ## [3.2.0-alpha2] - 2017-11-30
@@ -61,6 +62,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Loading installed luarocks from outside rover [PR #503](https://github.com/3scale/apicast/pull/503)
 - Support IPv6 addresses in `/etc/resolv.conf` [PR #511](https://github.com/3scale/apicast/pull/511)
+- Fix possible 100% CPU usage when starting APIcast and manipulating filesystem [PR #547](https://github.com/3scale/apicast/pull/547)
 
 ## [3.2.0-alpha1]
 
